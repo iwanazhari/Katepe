@@ -3,13 +3,15 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import ProductCatalog from '../components/ProductCatalog';
+import StatisticsSection from '../components/StatisticsSection';
+import CarCatalog from '../components/CarCatalog';
+import SubscribeSection from '../components/SubscribeSection';
 import Footer from '../components/Footer';
-import ProductDetailModal from '../components/ProductDetailModal';
-import type { Product } from '../types';
+import CarDetailModal from '../components/CarDetailModal';
+import type { Car } from '../types';
 
 const HomePage = () => {
-	const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+	const [selectedCar, setSelectedCar] = useState<Car | null>(null);
 
 	return (
 		<ThemeProvider>
@@ -18,17 +20,19 @@ const HomePage = () => {
 					<Header />
 					<main>
 						<Hero />
-						<ProductCatalog
-							onProductSelect={(product) => setSelectedProduct(product)}
+						<StatisticsSection />
+						<CarCatalog
+							onCarSelect={(car) => setSelectedCar(car)}
 						/>
+						<SubscribeSection />
 					</main>
 					<Footer />
-					{selectedProduct && (
-						<ProductDetailModal
-							product={selectedProduct}
-							open={!!selectedProduct}
+					{selectedCar && (
+						<CarDetailModal
+							car={selectedCar}
+							open={!!selectedCar}
 							onOpenChange={(open) => {
-								if (!open) setSelectedProduct(null);
+								if (!open) setSelectedCar(null);
 							}}
 						/>
 					)}

@@ -87,7 +87,7 @@ const AboutUsContent = memo(() => {
 	}), []);
 
 	return (
-		<div className="min-h-screen bg-white dark:bg-background text-foreground transition-colors duration-300">
+		<div className="min-h-screen bg-background text-foreground transition-colors duration-300">
 			<Header />
 			
 			{/* Hero Section with Title and First Paragraph */}
@@ -168,7 +168,7 @@ const AboutUsContent = memo(() => {
 						transition={{ duration: 1.5, ease: 'easeOut' }}
 					>
 						<div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{
-							backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
+							backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
 							backgroundSize: '24px 24px',
 							backgroundPosition: '0 0',
 						}}></div>
@@ -185,7 +185,7 @@ const AboutUsContent = memo(() => {
 						className="mb-12 md:mb-16"
 					>
 						<motion.h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-relaxed md:leading-loose mb-4">
-							<span className="text-foreground dark:text-foreground inline-block">
+							<span className="text-foreground inline-block">
 								{t('aboutHeroTitle').split(' ').map((word, index) => (
 									<motion.span
 										key={index}
@@ -222,7 +222,7 @@ const AboutUsContent = memo(() => {
 						className="max-w-3xl mx-auto text-left"
 					>
 						<motion.p 
-							className="text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground dark:text-foreground/90 font-light"
+							className="text-lg md:text-xl lg:text-2xl leading-relaxed text-muted-foreground font-light"
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
 						>
@@ -233,11 +233,11 @@ const AboutUsContent = memo(() => {
 			</section>
 
 			{/* Content Section with Remaining Paragraphs */}
-			<section className="py-20 md:py-28 px-4 bg-background relative overflow-hidden border-t border-border/50">
+			<section className="py-20 md:py-28 px-4 bg-background relative overflow-hidden border-t border-border">
 				{/* Background dengan gradient lebih subtle */}
 				<div className="absolute inset-0 z-0 overflow-hidden">
 					{/* Subtle gradient background */}
-					<div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background dark:from-background dark:via-background/95 dark:to-background"></div>
+					<div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background"></div>
 					
 					{/* Subtle Dot Pattern Background */}
 					<motion.div 
@@ -247,7 +247,7 @@ const AboutUsContent = memo(() => {
 						transition={{ duration: 1.5, ease: 'easeOut' }}
 					>
 						<div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{
-							backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
+							backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
 							backgroundSize: '24px 24px',
 							backgroundPosition: '0 0',
 						}}></div>
@@ -266,7 +266,7 @@ const AboutUsContent = memo(() => {
 							<motion.p
 								key={num}
 								variants={paragraphVariants}
-								className="text-base md:text-lg lg:text-xl leading-relaxed text-foreground dark:text-foreground/90 text-left font-light"
+								className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground text-left font-light"
 								whileInView={{ 
 									opacity: 1, 
 									y: 0,

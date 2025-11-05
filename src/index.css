@@ -27,24 +27,24 @@
 	}
 
 	.dark {
-		--background: 222.2 84% 4.9%;
-		--foreground: 210 40% 98%;
-		--card: 222.2 84% 4.9%;
-		--card-foreground: 210 40% 98%;
-		--popover: 222.2 84% 4.9%;
-		--popover-foreground: 210 40% 98%;
+		--background: 0 0% 0%;
+		--foreground: 0 0% 100%;
+		--card: 0 0% 10%;
+		--card-foreground: 0 0% 100%;
+		--popover: 0 0% 10%;
+		--popover-foreground: 0 0% 100%;
 		--primary: 217 91% 60%;
-		--primary-foreground: 222.2 47.4% 11.2%;
-		--secondary: 217.2 32.6% 17.5%;
-		--secondary-foreground: 210 40% 98%;
-		--muted: 217.2 32.6% 17.5%;
-		--muted-foreground: 215 20.2% 65.1%;
+		--primary-foreground: 0 0% 100%;
+		--secondary: 0 0% 15%;
+		--secondary-foreground: 0 0% 100%;
+		--muted: 0 0% 15%;
+		--muted-foreground: 0 0% 70%;
 		--accent: 217 91% 60%;
-		--accent-foreground: 210 40% 98%;
+		--accent-foreground: 0 0% 100%;
 		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 210 40% 98%;
-		--border: 217.2 32.6% 17.5%;
-		--input: 217.2 32.6% 17.5%;
+		--destructive-foreground: 0 0% 100%;
+		--border: 0 0% 20%;
+		--input: 0 0% 20%;
 		--ring: 217 91% 60%;
 	}
 }
@@ -162,6 +162,128 @@
 
 	.animate-scale-in {
 		animation: scale-in 0.3s ease-out;
+	}
+
+	/* Car-themed Animations */
+	@keyframes drive {
+		0% {
+			transform: translateX(-100%) translateY(0);
+		}
+		50% {
+			transform: translateX(0) translateY(-5px);
+		}
+		100% {
+			transform: translateX(100%) translateY(0);
+		}
+	}
+
+	@keyframes car-bounce {
+		0%, 100% {
+			transform: translateY(0) rotate(0deg);
+		}
+		25% {
+			transform: translateY(-10px) rotate(2deg);
+		}
+		75% {
+			transform: translateY(-5px) rotate(-2deg);
+		}
+	}
+
+	.animate-car-bounce {
+		animation: car-bounce 2s ease-in-out infinite;
+	}
+
+	@keyframes speed-line {
+		0% {
+			transform: translateX(0) scaleX(0);
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			transform: translateX(200px) scaleX(1);
+			opacity: 0;
+		}
+	}
+
+	.animate-speed-line {
+		animation: speed-line 1.5s ease-out infinite;
+	}
+
+	/* Parallax Effect */
+	@keyframes parallax {
+		0% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(-20px);
+		}
+	}
+
+	.animate-parallax {
+		animation: parallax 20s ease-in-out infinite alternate;
+	}
+
+	/* Glow Pulse */
+	@keyframes glow-pulse {
+		0%, 100% {
+			filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+		}
+		50% {
+			filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.8));
+		}
+	}
+
+	.animate-glow-pulse {
+		animation: glow-pulse 2s ease-in-out infinite;
+	}
+
+	/* Slide In From Right */
+	@keyframes slide-in-right {
+		from {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	.animate-slide-in-right {
+		animation: slide-in-right 0.8s ease-out;
+	}
+
+	/* Counter Up Animation */
+	@keyframes counter-up {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-counter-up {
+		animation: counter-up 0.6s ease-out;
+	}
+
+	/* Background Pattern Animation */
+	@keyframes pattern-move {
+		0% {
+			background-position: 0% 0%;
+		}
+		100% {
+			background-position: 100% 100%;
+		}
+	}
+
+	.animate-pattern-move {
+		animation: pattern-move 20s linear infinite;
+		background-size: 200% 200%;
 	}
 
 	/* Glass Morphism */
