@@ -1,0 +1,226 @@
+PROMPT UNTUK AI - SHADCN/UI VERSION
+=====================================
+
+Buatkan webapp company profile yang responsif dan smooth dengan animasi menakjubkan untuk KATEPE DIGITAL menggunakan React + Vite + Framer Motion + Shadcn/UI + Tailwind CSS + TypeScript.
+
+REQUIREMENTS:
+
+1. TECH STACK:
+   - React 18 + Vite (build tool cepat)
+   - Shadcn/UI (komponen UI yang customizable)
+   - Tailwind CSS (responsive utilities)
+   - Framer Motion (animasi smooth)
+   - TypeScript (type safety)
+   - Radix UI (untuk accessibility - built-in dengan shadcn)
+
+2. SETUP SHADCN/UI:
+   - Install shadcn/ui dengan: npx shadcn-ui@latest init
+   - Pilih style: default
+   - Base color: slate
+   - CSS variables: yes
+   - Install components yang diperlukan:
+     * Button
+     * Card
+     * Dialog (untuk modal)
+     * Separator
+     * Sheet (optional untuk mobile menu)
+     * Badge (untuk technologies)
+     * Avatar (optional)
+     * Switch (untuk theme toggle)
+
+3. STRUKTUR HALAMAN:
+   
+   HEADER:
+   - Gunakan shadcn Card component dengan backdrop blur
+   - Fixed navigation dengan shadcn Sheet untuk mobile menu
+   - Logo: "KATEPE DIGITAL" dengan shadcn Typography atau custom
+   - Links: Home, Products, About, Contact menggunakan shadcn Button variants="ghost"
+   - Fade in + slide down animation dengan Framer Motion
+   - Theme switcher menggunakan shadcn Switch atau custom toggle
+   - Language switcher menggunakan shadcn Select atau Button group
+   
+   HERO SECTION:
+   - Background gradient menggunakan Tailwind utilities
+   - Title: "Grow Your Business With Us" dengan shadcn Typography
+   - Subtitle: "Transform your business with our innovative solutions"
+   - CTA button menggunakan shadcn Button dengan variant="default"
+   - Fade in + slide up dengan delay menggunakan Framer Motion
+   - Hover animation dengan motion props
+   
+   PRODUCT CATALOG SECTION:
+   - Title: "Our Product Services" dengan shadcn Separator untuk underline
+   - Grid menggunakan shadcn Card component untuk setiap product
+   - Grid responsif: 3 kolom (desktop), 2 kolom (tablet), 1 kolom (mobile)
+   - Setiap card harus memiliki:
+     * shadcn Card component sebagai container
+     * CardHeader untuk title
+     * CardContent untuk description dan button
+     * Image dengan hover zoom + brightness change
+     * Title dengan color change saat hover
+     * Description (2 lines max) dengan line-clamp-2
+     * shadcn Button dengan variant="outline" untuk "LEARN MORE"
+     * Stagger entrance animation dengan Framer Motion
+     * Lift effect saat hover (translateY + shadow glow)
+   
+   PRODUCT DETAIL MODAL:
+   - Gunakan shadcn Dialog component untuk modal
+   - Full-screen dengan backdrop blur (built-in Dialog)
+   - Spring animation dengan Framer Motion (scale 0.8→1.0, translateY 50→0)
+   - Close button menggunakan Dialog built-in atau custom dengan motion
+   - Product image dengan zoom effect
+   - Detail menggunakan shadcn Card components:
+     * CardHeader untuk title
+     * CardContent untuk overview, features, technologies
+   - Features list dengan shadcn Badge atau custom checkmark icons
+   - Technologies menggunakan shadcn Badge component
+   - Stagger animation untuk content dengan Framer Motion
+   - Close dengan ESC atau click backdrop (built-in Dialog)
+   
+   FOOTER:
+   - Menggunakan shadcn Card atau custom layout
+   - 4 kolom (grid responsif)
+   - Kolom 1: Company info (KATEPE DIGITAL, PT Kolaborasi Tujuh Pelangi, address, email, phone)
+   - Kolom 2: Profile (About Us link menggunakan shadcn Button variant="link")
+   - Kolom 3: Services (Digital Marketing, IT Solutions)
+   - Kolom 4: Follow Us (Social icons menggunakan shadcn Button dengan icons)
+   - Hover animation pada icons menggunakan Framer Motion
+   - Copyright text
+   - Separator menggunakan shadcn Separator component
+
+4. PRODUK YANG HARUS ADA (5 produk):
+
+   a. Cash Management System (Available)
+   - Description: "Smart Solution for Attendance, Overtime, and Leave Requests"
+   - Features: Real-time attendance, Automated overtime, Leave management, Reporting dashboard, Mobile support
+   - Technologies: React, Node.js, PostgreSQL, AWS (gunakan shadcn Badge)
+   
+   b. Warehouse Management System (Available)
+   - Description: "Smart Inventory Control for Efficient Warehouse Operations"
+   - Features: Real-time inventory, Stock alerts, Barcode scanning, Analytics, Multi-warehouse
+   - Technologies: Vue.js, Python, MongoDB, Docker (gunakan shadcn Badge)
+   
+   c. Human Resource Information System (Available)
+   - Description: "Integrated HR Management for the Modern Workplace"
+   - Features: Employee database, Performance tracking, Payroll integration, Recruitment, Self-service portal
+   - Technologies: Angular, Java, MySQL, Kubernetes (gunakan shadcn Badge)
+   
+   d. Courier System (Available)
+   - Description: "Integrated Courier Management System"
+   - Features: Route optimization, Real-time tracking, Delivery updates, Driver management, Customer notifications
+   - Technologies: React Native, Node.js, PostgreSQL, Google Maps API (gunakan shadcn Badge)
+   
+   e. Freight Management System (Coming Soon)
+   - Description: "Integrated Freight Management System"
+   - Features: Freight scheduling, Container tracking, Document management, Cost optimization, Multi-modal transport
+   - Technologies: Next.js, Python, MongoDB, AWS (gunakan shadcn Badge)
+   - SPECIAL: Overlay "COMING SOON" menggunakan shadcn Badge atau Alert component yang bold dan eye-catching
+
+5. ANIMASI REQUIREMENTS:
+   - Page load: Fade in + slide animations dengan stagger menggunakan Framer Motion
+   - Hover: Scale, translateY, brightness, shadow glow, color transitions
+   - Modal: Spring physics (damping 25, stiffness 300) dengan Framer Motion
+   - Scroll: Fade in saat scroll into view menggunakan Framer Motion whileInView
+   - Smooth scroll untuk anchor links
+   - 60fps performance (gunakan transform/opacity, bukan layout properties)
+   - Combine shadcn transitions dengan Framer Motion untuk smooth effects
+
+6. RESPONSIVE DESIGN:
+   - Desktop (≥1024px): 3 kolom grid, full nav, large text
+   - Tablet (768-1023px): 2 kolom grid, full nav, medium text
+   - Mobile (<768px): 1 kolom grid, shadcn Sheet untuk mobile menu, small text, touch-friendly (min 44x44px)
+   - Gunakan shadcn responsive utilities dan Tailwind breakpoints
+
+7. COLOR SCHEME & THEME:
+   - Setup shadcn/ui dengan dark mode support
+   - Background: Dark (#0a0a0a atau #1a1a1a) - gunakan CSS variables dari shadcn
+   - Cards: Dark (#1a1a1a) - gunakan shadcn Card default styling
+   - Text: White dengan gray variants - gunakan shadcn typography
+   - Accent: Blue (#3b82f6) - configure di shadcn theme config
+   - Borders: Gray-800 - gunakan shadcn border utilities
+   - Hover: Accent color dengan glow effect
+   - Light mode: Configure di shadcn theme dengan CSS variables
+
+8. SHADCN/UI COMPONENTS YANG DIGUNAKAN:
+   - Button: Untuk CTA, navigation, actions
+   - Card: Untuk product cards, content sections
+   - Dialog: Untuk product detail modal
+   - Badge: Untuk technologies, status labels
+   - Separator: Untuk section dividers
+   - Sheet: Untuk mobile navigation (optional)
+   - Switch: Untuk theme toggle
+   - Select: Untuk language switcher (optional)
+   - Typography: Untuk headings dan text (jika ada)
+
+9. CUSTOMIZATION:
+   - Customize shadcn components di components/ui/ folder
+   - Override default styles dengan Tailwind utilities
+   - Add custom animations dengan Framer Motion
+   - Maintain shadcn accessibility features (ARIA labels, keyboard navigation)
+
+10. PERFORMANCE:
+    - Lazy load images dengan loading="lazy"
+    - Optimize animations (transform/opacity only)
+    - Fast initial load (<3s)
+    - Smooth 60fps
+    - Code splitting jika perlu
+    - Shadcn components sudah optimized by default
+
+11. ADD ON:
+    - Light & dark mode: Gunakan shadcn theme system dengan CSS variables
+    - Switch language Indonesian & English: Gunakan Context API atau Zustand
+    - Professional animated: Combine shadcn transitions dengan Framer Motion
+
+12. FILE STRUCTURE:
+```
+src/
+├── components/
+│   ├── ui/              # shadcn components (auto-generated)
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── dialog.tsx
+│   │   ├── badge.tsx
+│   │   └── ...
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── ProductCatalog.tsx
+│   ├── ProductCard.tsx
+│   ├── ProductDetailModal.tsx
+│   └── Footer.tsx
+├── contexts/
+│   ├── ThemeContext.tsx
+│   └── LanguageContext.tsx
+├── lib/
+│   └── utils.ts         # shadcn cn() utility
+├── data/
+│   └── products.ts
+├── types.ts
+├── App.tsx
+└── main.tsx
+```
+
+13. SETUP INSTRUCTIONS:
+    - npm create vite@latest katepe-digital -- --template react-ts
+    - cd katepe-digital && npm install
+    - npx shadcn-ui@latest init
+    - npm install framer-motion
+    - npx shadcn-ui@latest add button card dialog badge separator
+    - Setup theme context untuk dark mode
+    - Setup language context untuk i18n
+
+OUTPUT YANG DIHARAPKAN:
+✅ Animasi smooth dan menakjubkan di setiap interaksi
+✅ 5 produk dengan detail lengkap menggunakan shadcn components
+✅ Responsif sempurna di desktop, tablet, mobile
+✅ Modal detail menggunakan shadcn Dialog dengan spring animation
+✅ Dark theme modern dan professional dengan shadcn theme system
+✅ Performance optimized dengan Vite + React
+✅ Accessibility built-in dari Radix UI (via shadcn)
+✅ Clean, maintainable code dengan shadcn component system
+
+NOTES:
+- Shadcn/ui components dapat di-customize sepenuhnya
+- Semua components accessible out-of-the-box
+- Dark mode support built-in dengan CSS variables
+- Combine shadcn styling dengan Framer Motion untuk animations
+- Gunakan shadcn variants untuk consistent design system
+

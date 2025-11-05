@@ -1,0 +1,138 @@
+PROMPT UNTUK AI - COPY & PASTE READY
+=====================================
+
+Buatkan webapp company profile yang responsif dan smooth dengan animasi menakjubkan untuk KATEPE DIGITAL menggunakan React + Vite + Framer Motion + Tailwind CSS + TypeScript.
+
+REQUIREMENTS:
+
+1. TECH STACK:
+   - React 18 + Vite (build tool cepat)
+   - Tailwind CSS (responsive utilities)
+   - Framer Motion (animasi smooth)
+   - TypeScript (type safety)
+
+2. STRUKTUR HALAMAN:
+   
+   HEADER:
+   - Fixed navigation dengan backdrop blur
+   - Logo: "KATEPE DIGITAL"
+   - Links: Home, Products, About, Contact
+   - Fade in + slide down animation
+   
+   HERO SECTION:
+   - Background blur/gradient
+   - Title: "Grow Your Business With Us"
+   - Subtitle: "Transform your business with our innovative solutions"
+   - CTA button dengan hover animation
+   - Fade in + slide up dengan delay
+   
+   PRODUCT CATALOG SECTION:
+   - Title: "Our Product Services" dengan accent underline
+   - Grid responsif: 3 kolom (desktop), 2 kolom (tablet), 1 kolom (mobile)
+   - Setiap card harus memiliki:
+     * Image dengan hover zoom + brightness change
+     * Title dengan color change saat hover
+     * Description (2 lines max)
+     * "LEARN MORE" button
+     * Stagger entrance animation
+     * Lift effect saat hover (translateY + shadow glow)
+   
+   PRODUCT DETAIL MODAL:
+   - Full-screen dengan backdrop blur
+   - Spring animation (scale 0.8→1.0, translateY 50→0)
+   - Close button dengan rotate animation
+   - Product image dengan zoom
+   - Detail: Title, Overview, Features list (dengan checkmark icons), Technologies badges
+   - Stagger animation untuk content
+   - Close dengan ESC atau click backdrop
+   
+   FOOTER:
+   - 4 kolom (grid responsif)
+   - Kolom 1: Company info (KATEPE DIGITAL, PT Kolaborasi Tujuh Pelangi, address, email, phone)
+   - Kolom 2: Profile (About Us link)
+   - Kolom 3: Services (Digital Marketing, IT Solutions)
+   - Kolom 4: Follow Us (Social icons: Facebook, LinkedIn, YouTube, Instagram)
+   - Hover animation pada icons
+   - Copyright text
+
+3. PRODUK YANG HARUS ADA (5 produk):
+
+   a. Cash Management System (Available)
+   - Description: "Smart Solution for Attendance, Overtime, and Leave Requests"
+   - Features: Real-time attendance, Automated overtime, Leave management, Reporting dashboard, Mobile support
+   - Technologies: React, Node.js, PostgreSQL, AWS
+   
+   b. Warehouse Management System (Available)
+   - Description: "Smart Inventory Control for Efficient Warehouse Operations"
+   - Features: Real-time inventory, Stock alerts, Barcode scanning, Analytics, Multi-warehouse
+   - Technologies: Vue.js, Python, MongoDB, Docker
+   
+   c. Human Resource Information System (Available)
+   - Description: "Integrated HR Management for the Modern Workplace"
+   - Features: Employee database, Performance tracking, Payroll integration, Recruitment, Self-service portal
+   - Technologies: Angular, Java, MySQL, Kubernetes
+   
+   d. Courier System (Available)
+   - Description: "Integrated Courier Management System"
+   - Features: Route optimization, Real-time tracking, Delivery updates, Driver management, Customer notifications
+   - Technologies: React Native, Node.js, PostgreSQL, Google Maps API
+   
+   e. Freight Management System (Coming Soon)
+   - Description: "Integrated Freight Management System"
+   - Features: Freight scheduling, Container tracking, Document management, Cost optimization, Multi-modal transport
+   - Technologies: Next.js, Python, MongoDB, AWS
+   - SPECIAL: Overlay "COMING SOON" yang bold dan eye-catching
+
+4. ANIMASI REQUIREMENTS:
+   - Page load: Fade in + slide animations dengan stagger
+   - Hover: Scale, translateY, brightness, shadow glow, color transitions
+   - Modal: Spring physics (damping 25, stiffness 300)
+   - Scroll: Fade in saat scroll into view
+   - Smooth scroll untuk anchor links
+   - 60fps performance (gunakan transform/opacity, bukan layout properties)
+
+5. RESPONSIVE DESIGN:
+   - Desktop (≥1024px): 3 kolom grid, full nav, large text
+   - Tablet (768-1023px): 2 kolom grid, full nav, medium text
+   - Mobile (<768px): 1 kolom grid, stacked nav, small text, touch-friendly (min 44x44px)
+
+6. COLOR SCHEME:
+   - Background: Dark (#0a0a0a atau #1a1a1a)
+   - Cards: Dark (#1a1a1a)
+   - Text: White dengan gray variants
+   - Accent: Blue (#3b82f6)
+   - Borders: Gray-800
+   - Hover: Accent color dengan glow effect
+
+7. PERFORMANCE:
+   - Lazy load images
+   - Optimize animations (transform/opacity only)
+   - Fast initial load (<3s)
+   - Smooth 60fps
+
+8. FILE STRUCTURE:
+```
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── ProductCatalog.tsx
+│   ├── ProductCard.tsx
+│   ├── ProductDetailModal.tsx
+│   └── Footer.tsx
+├── data/
+│   └── products.ts
+├── types.ts
+├── App.tsx
+├── main.tsx
+└── index.css
+```
+
+OUTPUT YANG DIHARAPKAN:
+✅ Animasi smooth dan menakjubkan di setiap interaksi
+✅ 5 produk dengan detail lengkap
+✅ Responsif sempurna di desktop, tablet, mobile
+✅ Modal detail dengan spring animation
+✅ Dark theme modern dan professional
+✅ Performance optimized dengan Vite + React
+
