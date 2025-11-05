@@ -12,10 +12,19 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			output: {
-				manualChunks: {
-					'vendor-react': ['react', 'react-dom'],
-					'vendor-framer': ['framer-motion'],
-					'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-sheet', '@radix-ui/react-separator'],
+				manualChunks: (id) => {
+					if (id.includes('node_modules')) {
+						if (id.includes('react') || id.includes('react-dom')) {
+							return 'vendor-react';
+						}
+						if (id.includes('framer-motion')) {
+							return 'vendor-framer';
+						}
+						if (id.includes('@radix-ui')) {
+							return 'vendor-ui';
+						}
+						return 'vendor-other';
+					}
 				},
 			},
 		},

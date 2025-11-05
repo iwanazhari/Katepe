@@ -285,7 +285,9 @@ const AboutUsContent = memo(() => {
 			<Footer />
 		</div>
 	);
-};
+});
+
+AboutUsContent.displayName = 'AboutUsContent';
 
 const AboutUs = () => {
 	return (

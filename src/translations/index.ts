@@ -28,6 +28,8 @@ export const translations = {
 		courierSystemDesc: 'Sistem Manajemen Kurir Terintegrasi',
 		freightManagementTitle: 'Sistem Manajemen Angkutan',
 		freightManagementDesc: 'Sistem Manajemen Angkutan Terintegrasi',
+		integratedManagementTitle: 'Sistem Manajemen Terintegrasi',
+		integratedManagementDesc: 'Sistem Manajemen Terintegrasi',
 		comingSoon: 'SEGERA HADIR',
 		
 		// Footer
