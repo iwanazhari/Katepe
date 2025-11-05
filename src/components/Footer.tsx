@@ -61,7 +61,7 @@ const Footer = memo(() => {
 								className="flex items-center gap-2"
 							>
 								<span className="text-muted-foreground text-sm">Email:</span>
-								<Button variant="link" asChild className="h-auto p-0 hover:text-primary transition-colors">
+								<Button variant="link" asChild className="h-auto p-0 transition-all duration-200">
 									<a href="mailto:info@katepe.com">info@katepe.com</a>
 								</Button>
 							</motion.div>
@@ -71,7 +71,7 @@ const Footer = memo(() => {
 								className="flex items-center gap-2"
 							>
 								<span className="text-muted-foreground text-sm">Phone:</span>
-								<Button variant="link" asChild className="h-auto p-0 hover:text-primary transition-colors">
+								<Button variant="link" asChild className="h-auto p-0 transition-all duration-200">
 									<a href="tel:+6285117588770">(+62) 851 1758 8770</a>
 								</Button>
 							</motion.div>
@@ -91,7 +91,7 @@ const Footer = memo(() => {
 								<Button
 									variant="link"
 									asChild
-									className="h-auto p-0 hover:text-primary transition-all duration-200"
+									className="h-auto p-0 transition-all duration-200"
 								>
 									<motion.a
 										href="/about"
@@ -122,7 +122,7 @@ const Footer = memo(() => {
 								<Button
 									variant="link"
 									asChild
-									className="h-auto p-0 hover:text-primary transition-all duration-200"
+									className="h-auto p-0 transition-all duration-200"
 								>
 									<motion.a
 										href="#products"
@@ -137,7 +137,7 @@ const Footer = memo(() => {
 								<Button
 									variant="link"
 									asChild
-									className="h-auto p-0 hover:text-primary transition-all duration-200"
+									className="h-auto p-0 transition-all duration-200"
 								>
 									<motion.a
 										href="#products"
@@ -179,7 +179,7 @@ const Footer = memo(() => {
 											variant="outline"
 											size="icon"
 											asChild
-											className="relative group hover:border-primary hover:bg-primary/10 transition-all duration-300 border-2"
+											className="relative group transition-all duration-300 border-2"
 										>
 											<a
 												href={social.href}
@@ -189,7 +189,7 @@ const Footer = memo(() => {
 													whileHover={{ scale: 1.2, rotate: 360 }}
 													transition={{ duration: 0.5 }}
 												>
-													<Icon className="h-5 w-5 group-hover:text-primary transition-colors" />
+													<Icon className="h-5 w-5 transition-colors" />
 												</motion.div>
 											</a>
 										</Button>

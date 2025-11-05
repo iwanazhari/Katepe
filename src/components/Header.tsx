@@ -108,7 +108,7 @@ const Header = memo(() => {
 								<Button
 									variant="ghost"
 									asChild
-									className="relative group hover:text-primary transition-colors duration-200"
+									className="relative group transition-all duration-200"
 								>
 									<a 
 										href={item.href} 
@@ -116,8 +116,9 @@ const Header = memo(() => {
 											e.preventDefault();
 											handleNavigation(item.href, item.isRoute || false);
 										}}
+										className="relative"
 									>
-										<span className="relative z-10">{t(item.key)}</span>
+										<span className="relative z-10 font-semibold text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors duration-200">{t(item.key)}</span>
 										<motion.span
 											className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary origin-left"
 											initial={{ scaleX: 0 }}
@@ -136,16 +137,16 @@ const Header = memo(() => {
 						<Button
 							variant="ghost"
 							onClick={toggleLanguage}
-							className="relative group hover:text-primary transition-all duration-200"
+							className="relative group transition-all duration-200"
 							aria-label="Toggle language"
 						>
 							<motion.div
 								whileHover={{ scale: 1.1, rotate: 360 }}
 								transition={{ duration: 0.5 }}
 							>
-								<Globe className="h-4 w-4 mr-2" />
+								<Globe className="h-4 w-4 mr-2 text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors" />
 							</motion.div>
-							<span className="text-sm font-medium">{language === 'id' ? 'ID' : 'EN'}</span>
+							<span className="text-sm font-semibold text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors">{language === 'id' ? 'ID' : 'EN'}</span>
 						</Button>
 
 						{/* Theme Switcher */}
@@ -153,7 +154,7 @@ const Header = memo(() => {
 							variant="ghost"
 							size="icon"
 							onClick={toggleTheme}
-							className="relative group hover:text-primary transition-all duration-200"
+							className="relative group transition-all duration-200"
 							aria-label="Toggle theme"
 						>
 							<motion.div
@@ -162,9 +163,9 @@ const Header = memo(() => {
 								transition={{ duration: 0.3, ease: 'easeInOut' }}
 							>
 								{theme === 'dark' ? (
-									<Sun className="h-5 w-5" />
+									<Sun className="h-5 w-5 text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors" />
 								) : (
-									<Moon className="h-5 w-5" />
+									<Moon className="h-5 w-5 text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors" />
 								)}
 							</motion.div>
 						</Button>
@@ -172,8 +173,8 @@ const Header = memo(() => {
 						{/* Mobile Menu */}
 						<Sheet>
 							<SheetTrigger asChild className="md:hidden">
-								<Button variant="ghost" size="icon" className="hover:text-primary">
-									<Menu className="h-5 w-5" />
+								<Button variant="ghost" size="icon" className="group">
+									<Menu className="h-5 w-5 text-foreground group-hover:text-primary dark:group-hover:text-primary transition-colors" />
 								</Button>
 							</SheetTrigger>
 							<SheetContent side="right" className="w-[300px] sm:w-[400px]">
@@ -188,7 +189,7 @@ const Header = memo(() => {
 											<Button
 												variant="ghost"
 												asChild
-												className="justify-start w-full text-base h-12 hover:bg-primary/10 hover:text-primary transition-colors"
+												className="justify-start w-full text-base h-12 transition-all duration-200"
 											>
 												<a 
 													href={item.href} 

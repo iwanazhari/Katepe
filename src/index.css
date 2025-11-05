@@ -228,4 +228,38 @@
 	::-webkit-scrollbar-thumb:hover {
 		@apply bg-primary/50;
 	}
+
+	/* Fix Hover Text Visibility - Force primary color on hover */
+	button:hover,
+	a:hover {
+		--tw-text-opacity: 1;
+	}
+
+	/* Navigation links hover */
+	.group:hover span,
+	button.group:hover span,
+	a.group:hover span {
+		color: hsl(217 91% 60%) !important;
+	}
+
+	/* Icons hover */
+	.group:hover svg,
+	button.group:hover svg,
+	a.group:hover svg {
+		color: hsl(217 91% 60%) !important;
+	}
+
+	/* Dark mode navigation links hover */
+	.dark .group:hover span,
+	.dark button.group:hover span,
+	.dark a.group:hover span {
+		color: hsl(217 91% 60%) !important;
+	}
+
+	/* Dark mode icons hover */
+	.dark .group:hover svg,
+	.dark button.group:hover svg,
+	.dark a.group:hover svg {
+		color: hsl(217 91% 60%) !important;
+	}
 }

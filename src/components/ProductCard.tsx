@@ -153,7 +153,7 @@ const ProductCard = memo(({ product, onClick, index }: ProductCardProps) => {
 					</p>
 					<Button
 						variant="outline"
-						className="w-full group/btn relative overflow-hidden border-2 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-foreground hover:text-foreground dark:text-foreground dark:hover:text-foreground font-medium"
+						className="w-full group/btn relative overflow-hidden border-2 hover:border-primary dark:hover:border-primary hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300 text-foreground hover:text-primary dark:hover:text-primary font-medium"
 					>
 						<span className="relative z-10 flex items-center justify-center gap-2">
 							{t('learnMore')}
