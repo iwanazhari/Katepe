@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Initialize theme from localStorage
-const savedTheme = localStorage.getItem('theme') || 'dark';
-if (savedTheme === 'dark') {
-	document.documentElement.classList.add('dark');
-} else {
-	document.documentElement.classList.remove('dark');
+// Initialize theme from localStorage (safe check for SSR)
+if (typeof window !== 'undefined') {
+	const savedTheme = localStorage.getItem('theme') || 'dark';
+	if (savedTheme === 'dark') {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

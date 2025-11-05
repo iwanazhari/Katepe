@@ -15,6 +15,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 	const [language, setLanguage] = useState<Language>('en');
 
 	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		
 		const savedLanguage = localStorage.getItem('language') as Language;
 		if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'id')) {
 			setLanguage(savedLanguage);
@@ -22,6 +24,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 	}, []);
 
 	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		
 		localStorage.setItem('language', language);
 	}, [language]);
 

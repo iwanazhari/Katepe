@@ -8,27 +8,14 @@ export default defineConfig({
 		alias: {
 			'@': path.resolve(__dirname, './src'),
 		},
+		dedupe: ['react', 'react-dom'],
 	},
 	build: {
-		rollupOptions: {
-			output: {
-				manualChunks: (id) => {
-					if (id.includes('node_modules')) {
-						if (id.includes('react') || id.includes('react-dom')) {
-							return 'vendor-react';
-						}
-						if (id.includes('framer-motion')) {
-							return 'vendor-framer';
-						}
-						if (id.includes('@radix-ui')) {
-							return 'vendor-ui';
-						}
-						return 'vendor-other';
-					}
-				},
-			},
-		},
 		chunkSizeWarningLimit: 1000,
+		commonjsOptions: {
+			include: [/node_modules/],
+			transformMixedEsModules: true,
+		},
 	},
 });
 
